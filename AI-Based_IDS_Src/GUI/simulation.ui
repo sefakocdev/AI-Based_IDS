@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>850</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>850</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Historical Flow Simulation Window</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:1, y2:1, 
+        stop:0 rgb(40, 40, 40), 
+        stop:1 rgb(60, 60, 60)
+    );
+    color: rgb(230, 230, 230);
+    background-repeat: repeat;
+border-radius: 5px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buttonShuffle">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>50</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(100, 100, 100), 
+        stop:1 rgb(70, 70, 70)
+    );
+    color: rgb(0,255,255);
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+	font-size:16px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(120, 120, 120), 
+        stop:1 rgb(90, 90, 90)
+    );
+    border: 1px solid rgb(255, 255, 255);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(80, 80, 80), 
+        stop:1 rgb(60, 60, 60)
+    );
+    border: 1px solid rgb(200, 200, 200);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Shuffle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSendAll">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>50</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(100, 100, 100), 
+        stop:1 rgb(70, 70, 70)
+    );
+    color: rgb(0,255,255);
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+	font-size:16px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(120, 120, 120), 
+        stop:1 rgb(90, 90, 90)
+    );
+    border: 1px solid rgb(255, 255, 255);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(80, 80, 80), 
+        stop:1 rgb(60, 60, 60)
+    );
+    border: 1px solid rgb(200, 200, 200);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Send All</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>271</width>
+      <height>668</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+     <item>
+      <widget class="QTextEdit" name="textEdit_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>38</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>38</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+    border: 2px solid white;
+    color: white;</string>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Select Flow Counts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_3">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_42">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>BENIGN</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_benign">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_4">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_44">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>DoS Hulk</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_doshulk">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_5">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_46">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>Port Scan</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_portscan">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_20">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>DDoS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_ddos">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_6">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_48">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>DoS Golden Eye</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_dosgoldeneye">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_7">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_50">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>FTP-Patator</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_ftp">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_8">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_52">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>SSH-Patator</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_ssh">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_9">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_54">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>DoS Slowloris</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_dosslowloris">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_10">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_28" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_56">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>DoS Slowhttptest</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_dosslowhttp">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_11">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_58">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>Bot</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_bot">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_12">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_60">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>Infiltration</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_infiltration">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_13">
+       <property name="styleSheet">
+        <string notr="true">
+    border: 1px solid white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_31" stretch="2,0,0">
+          <item>
+           <widget class="QLabel" name="label_62">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+    font-weight: bold;
+    border: 1px rgb(50, 50, 50);
+    color: rgb(0,255,255);</string>
+            </property>
+            <property name="text">
+             <string>Heartbleed</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_heartbleed">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTableWidget" name="tableWidgetHisFlow">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>110</y>
+      <width>521</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+    font-weight: bold;       /* Kalın yazı */
+    font-size: 13px;         /* Yazı boyutu biraz daha büyük */
+    border: 2px solid rgb(250, 250, 250);
+    background-color: rgb(60, 60, 60);
+    color: rgb(230, 230, 230);
+    gridline-color: rgb(250, 250, 250);
+    selection-background-color: rgb(60, 120, 180);
+    selection-color: white;
+}
+
+QHeaderView::section {
+    font-weight: bold;       /* Kalın yazı */
+    font-size: 14px;         /* Yazı boyutu biraz daha büyük */
+    background-color: qlineargradient(
+        spread:pad,
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 rgb(50, 50, 50),
+        stop:1 rgb(40, 40, 40)
+    );
+    color: white;
+    border: 1px solid rgb(90, 90, 90);
+    padding: 6px;
+    font-weight: bold;
+  	color:rgb(0, 255, 255)	;
+}
+
+QTableWidget::item {
+    padding: 4px;
+    border: none;
+}
+
+QTableCornerButton::section {
+    background-color: rgb(60, 60, 60);
+    border: 1px solid rgb(90, 90, 90);
+}
+
+QScrollBar:vertical {
+    background: rgb(50, 50, 50);
+    width: 12px;
+    border: 1px solid rgb(90, 90, 90);
+}
+
+QScrollBar::handle:vertical {
+    background: rgb(100, 100, 100);
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgb(150, 150, 150);
+}
+</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <row>
+     <property name="text">
+      <string>aga</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Yeni Satır</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>as</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>dsa</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>dsada</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>sda</string>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string>s</string>
+     </property>
+    </item>
+    <item row="0" column="1">
+     <property name="text">
+      <string>sads</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>51</string>
+     </property>
+    </item>
+    <item row="0" column="3">
+     <property name="text">
+      <string>dsa</string>
+     </property>
+    </item>
+    <item row="16" column="0">
+     <property name="text">
+      <string>dsa</string>
+     </property>
+    </item>
+    <item row="16" column="1">
+     <property name="text">
+      <string>sad</string>
+     </property>
+    </item>
+    <item row="16" column="2">
+     <property name="text">
+      <string>sa</string>
+     </property>
+    </item>
+    <item row="16" column="3">
+     <property name="text">
+      <string>dsa</string>
+     </property>
+    </item>
+    <item row="21" column="0">
+     <property name="text">
+      <string>sda</string>
+     </property>
+    </item>
+    <item row="21" column="1">
+     <property name="text">
+      <string>s</string>
+     </property>
+    </item>
+    <item row="21" column="2">
+     <property name="text">
+      <string>dsa</string>
+     </property>
+    </item>
+    <item row="21" column="3">
+     <property name="text">
+      <string>dsa</string>
+     </property>
+    </item>
+    <item row="22" column="0">
+     <property name="text">
+      <string>3232</string>
+     </property>
+    </item>
+    <item row="22" column="1">
+     <property name="text">
+      <string>sad</string>
+     </property>
+    </item>
+    <item row="22" column="2">
+     <property name="text">
+      <string>dsad</string>
+     </property>
+    </item>
+    <item row="22" column="3">
+     <property name="text">
+      <string>dsadsa</string>
+     </property>
+    </item>
+    <item row="23" column="0">
+     <property name="text">
+      <string>dsasd</string>
+     </property>
+    </item>
+    <item row="23" column="1">
+     <property name="text">
+      <string>das</string>
+     </property>
+    </item>
+    <item row="23" column="2">
+     <property name="text">
+      <string>sad</string>
+     </property>
+    </item>
+    <item row="23" column="3">
+     <property name="text">
+      <string>sa</string>
+     </property>
+    </item>
+    <item row="24" column="0">
+     <property name="text">
+      <string>da</string>
+     </property>
+    </item>
+    <item row="24" column="1">
+     <property name="text">
+      <string>sadd</string>
+     </property>
+    </item>
+    <item row="24" column="2">
+     <property name="text">
+      <string>sad</string>
+     </property>
+    </item>
+    <item row="24" column="3">
+     <property name="text">
+      <string>sadasd</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="buttonAdd">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>690</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(100, 100, 100), 
+        stop:1 rgb(70, 70, 70)
+    );
+    color: rgb(0,255,255);
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+	font-size:16px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(120, 120, 120), 
+        stop:1 rgb(90, 90, 90)
+    );
+    border: 1px solid rgb(255, 255, 255);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(80, 80, 80), 
+        stop:1 rgb(60, 60, 60)
+    );
+    border: 1px solid rgb(200, 200, 200);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonClearAll">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>70</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(100, 100, 100), 
+        stop:1 rgb(70, 70, 70)
+    );
+    color: rgb(0,255,255);
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 6px 6px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+	font-size:16px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(120, 120, 120), 
+        stop:1 rgb(90, 90, 90)
+    );
+    border: 1px solid rgb(255, 255, 255);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:0, y2:1, 
+        stop:0 rgb(80, 80, 80), 
+        stop:1 rgb(60, 60, 60)
+    );
+    border: 1px solid rgb(200, 200, 200);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>clear all</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

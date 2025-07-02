@@ -1,0 +1,1 @@
+Protocol,Flow Duration,Total Fwd Packets,Total Backward Packets,Fwd Packet Length Max,Fwd Packet Length Min,Fwd Packet Length Mean,Bwd Packet Length Max,Bwd Packet Length Min,Bwd Packet Length Mean,Flow Bytes/s,Flow Packets/s,SYN Flag Count,ACK Flag Count,PSH Flag Count,RST Flag Count,Fwd Header Length,Bwd Header Length,Packet Length Mean
