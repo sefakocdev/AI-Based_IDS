@@ -1,1 +1,3 @@
-Protocol,Flow Duration,Total Fwd Packets,Total Backward Packets,Fwd Packet Length Max,Fwd Packet Length Min,Fwd Packet Length Mean,Bwd Packet Length Max,Bwd Packet Length Min,Bwd Packet Length Mean,Flow Bytes/s,Flow Packets/s,SYN Flag Count,ACK Flag Count,PSH Flag Count,RST Flag Count,Fwd Header Length,Bwd Header Length,Packet Length Mean
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b09ebef24e35b4091f9759b5f5f41acf6c19d241af6ca4779930dc5ec2356db
+size 342
